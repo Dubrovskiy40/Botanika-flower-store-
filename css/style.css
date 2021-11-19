@@ -24,8 +24,8 @@ li:hover {
 
 .container {
   max-width: 1200px;
-  /* padding: 0 calc(50% - 1200px / 2) */
   margin: 0 auto;
+  width: 100%;
 }
 
 .text {
@@ -229,7 +229,6 @@ li:hover {
   line-height: 29px;
   font-weight: 500;
   color: #AE7C78;
-  margin-bottom: 64px;
 }
 
 .our-products__btn {
@@ -320,6 +319,10 @@ li:hover {
   line-height: 29px;
   font-weight: 500;
   color: #fff;
+}
+
+.card-big__img {
+  display: block;
 }
 
 .card:hover {

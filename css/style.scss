@@ -26,8 +26,8 @@ li:hover {
 
 .container {
    max-width: 1200px;
-  /* padding: 0 calc(50% - 1200px / 2) */
    margin: 0 auto;
+   width: 100%;
 }
 
 .text {
@@ -183,7 +183,6 @@ border: 1px solid $color-brown2;
    &__price {
       @include font_24;
       color: $color-brown;
-      margin-bottom: 64px;
    }
 
    &__btn {
@@ -257,6 +256,10 @@ border: 1px solid $color-brown2;
       &__text {
          @include font_24;
          color: $color-white;
+      }
+
+      &__img {
+         display: block;
       }
    }
 
