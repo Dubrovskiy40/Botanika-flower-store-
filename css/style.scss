@@ -1,6 +1,10 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
+html {
+   font-size: 10px;
+}
+
 * {
    box-sizing: border-box;
    list-style-type: none;
@@ -18,6 +22,7 @@ body {
    font-family: 'Montserrat', sans-serif;
    font-style: normal;
    font-weight: normal;
+   font-size: 16px;
 }
 
 li:hover {
@@ -25,7 +30,7 @@ li:hover {
 }
 
 .container {
-   max-width: 1200px;
+   max-width: 120rem;
    margin: 0 auto;
    width: 100%;
 }
@@ -52,10 +57,10 @@ border: 1px solid $color-brown2;
 
 /* header */
 .header {
-   border-top: 1px solid $color-brown;
-   border-bottom: 1px solid $color-brown;
-   margin-bottom: 82px;
-   margin-top: 26px;
+   border-top: 0.1rem solid $color-brown;
+   border-bottom: 0.1rem solid $color-brown;
+   margin-bottom: 8.2rem;
+   margin-top: 2.6rem;
 
    &__section {
       display: flex;
@@ -67,13 +72,13 @@ border: 1px solid $color-brown2;
 }
 
 .header__list {
-   margin: 22px 0;
+   margin: 2.2rem 0;
 }
 
 
 /* heading */
 .heading {
-   margin-bottom: 48px;
+   margin-bottom: 4.8rem;
 
    &__main {
       display: flex;
@@ -82,7 +87,7 @@ border: 1px solid $color-brown2;
          font-family: Playfair Display;
          @include font_44;
          color: $color-brown;
-         margin-bottom: 24px;
+         margin-bottom: 2.4rem;
 
          & span {
             font-style: italic;
@@ -92,20 +97,20 @@ border: 1px solid $color-brown2;
       &_text {
          @include font_24;
          color: $color-brown;
-         margin-bottom: 64px;
+         margin-bottom: 6.4rem;
       }
 
       &_btn {
          color: $color-white;
          background: $color-brown2;
-         border-radius: 40px;
-         padding: 30px 70px;
+         border-radius: 4rem;
+         padding: 3rem 7rem;
       }
 
       &_pic-1 {
          display: flex;
          align-items: flex-end;
-         margin: 58px 20px 0 23px;
+         margin: 5.8rem 2rem 0 2.3rem;
       }
 
       &_pic-2 {
@@ -118,7 +123,7 @@ border: 1px solid $color-brown2;
 
 /* our-pluses */
 .our-pluses {
-   margin-bottom: 80px;
+   margin-bottom: 8rem;
 
    &__wrap {
       display: flex;
@@ -132,20 +137,20 @@ border: 1px solid $color-brown2;
       width: 33.33%;
 
       &-text {
-         margin-left: 20px;
-         max-width: 285px;
+         margin-left: 2rem;
+         max-width: 28.5rem;
       }
    }
 
    &__title {
-      margin-bottom: 8px;
+      margin-bottom: 0.8rem;
    }
 }
 
 
 /* our-products */
 .our-products {
-   margin-bottom: 80px;
+   margin-bottom: 8rem;
    display: flex;
    justify-content: center;
 
@@ -153,30 +158,30 @@ border: 1px solid $color-brown2;
       text-align: center;
       letter-spacing: 0.02em;
       color: $color-brown;
-      margin-bottom: 36px;
+      margin-bottom: 3.6rem;
    }
 
    &__content-wrap {
-      margin-right: 20px;
+      margin-right: 2rem;
       display: flex;
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
-      max-width: 794px;
+      max-width: 79.4rem;
    }
 
    &__content {
-      margin-top: 63px;
+      margin-top: 6.3rem;
 
       &-title {
          @include font_24;
          color: $color-brown;
-         margin-bottom: 20px;
+         margin-bottom: 2rem;
       }
 
       &-span {
-         margin-top: 24px;
-         margin-bottom: 24px;
+         margin-top: 2.4rem;
+         margin-bottom: 2.4rem;
       }
    }
 
@@ -186,22 +191,22 @@ border: 1px solid $color-brown2;
    }
 
    &__btn {
-      margin-top: 64px;
-      padding: 30px 105px;
+      margin-top: 6.4rem;
+      padding: 3rem 10.5rem;
       color: $color-white;
       background: $color-brown2;
-      border-radius: 40px;
+      border-radius: 4rem;
    }
 
    &__nav {
       display: flex;
       justify-content: center;
       flex-wrap: nowrap;
-      margin-top: 24px;
+      margin-top: 2.4rem;
    }
 
    &__nav-right {
-      margin-left: 20px;
+      margin-left: 2rem;
    }
 }
 
@@ -217,7 +222,7 @@ border: 1px solid $color-brown2;
 
 /* galery */
 .galery {
-   margin-bottom: 80px;
+   margin-bottom: 8rem;
 }
 .cards {
    display: flex;
@@ -225,8 +230,8 @@ border: 1px solid $color-brown2;
 }
 .card {
    position: relative;
-   margin-bottom: 80px;
-   max-width: 387px;
+   margin-bottom: 8rem;
+   max-width: 38.7rem;
 
    &:hover .card-overlay {
       opacity: 1;
@@ -242,13 +247,13 @@ border: 1px solid $color-brown2;
       display: flex;
 
       &-content {
-         padding: 40px 121px 64px 102px;
+         padding: 4rem 12.1rem 6.4rem 10.2rem;
       }
 
       &__title {
          font-family: Playfair Display;
          @include font_44;
-         margin-bottom: 24px;
+         margin-bottom: 2.4rem;
          letter-spacing: 0.02em;
          color: $color-white;
       }
@@ -264,13 +269,13 @@ border: 1px solid $color-brown2;
    }
 
    &:hover {
-      -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      -webkit-box-shadow: 0.6rem 0.4rem 3.5rem rgba(0, 0, 0, 0.21);
       box-shadow: $box-shadow;
    }
 
    &-overlay {
       background: rgba(174, 124, 120, 0.6);
-      border-radius: 10px;
+      border-radius: 1rem;
       position: absolute;
       top: 0;
       left: 0;
@@ -292,18 +297,18 @@ border: 1px solid $color-brown2;
    }
 
    &-2 {
-      margin-left: 19px;
-      margin-right: 19px;
+      margin-left: 1.9rem;
+      margin-right: 1.9rem;
    }
 }
 
 
 /* four-step */
 .four-step {
-   margin-bottom: 80px;
+   margin-bottom: 8rem;
 
    &__title {
-      margin-bottom: 36px;
+      margin-bottom: 3.6rem;
    }
 
    &__wrap {
@@ -318,8 +323,8 @@ border: 1px solid $color-brown2;
       text-align: center;
 
       &-title {
-         margin-top: 8px;
-         margin-bottom: 8px;
+         margin-top: 0.8rem;
+         margin-bottom: 0.8rem;
       }
    }
 }
@@ -327,7 +332,7 @@ border: 1px solid $color-brown2;
 
 /* our-news */
 .our-news {
-   margin-bottom: 80px;
+   margin-bottom: 8rem;
 
    &__content {
       display: flex;
@@ -336,19 +341,19 @@ border: 1px solid $color-brown2;
       &-text {
          display: flex;
          flex-direction: column;
-         max-width: 365px;
+         max-width: 36.5rem;
       }
    }
 
    &__title {
-      padding-top: 70px;
+      padding-top: 7rem;
       text-align: left;
    }
 
    &__text {
       text-align: left;
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
       @include font_24;
       color: $color-brown;
    }
@@ -360,7 +365,7 @@ border: 1px solid $color-brown2;
 
    &__photo {
       display: flex;
-      max-width: 692px;
+      max-width: 69.2rem;
       margin: 0 auto;
    }
 }
@@ -380,34 +385,34 @@ border: 1px solid $color-brown2;
 }
 
 .big {
-   max-height: 460px;
+   max-height: 46rem;
 }
 
 .small-wrap {
-   flex-basis: 285px;
+   flex-basis: 28.5rem;
 	flex-shrink: 0;
 	display: flex;
 	flex-direction: column;
-   margin-right:20px;
+   margin-right:2rem;
 }
 
 .small {
    flex-basis:50%;
-   max-height: 285px;
+   max-height: 28.5rem;
 }
 
 .our-news__photo-1 {
-   margin-bottom: 20px;
+   margin-bottom: 2rem;
 }
 
 
 /* review */
 .review {
-   padding: 40px 44px 64px;
-   margin-bottom: 80px;
+   padding: 4rem 4.4rem 6.4rem;
+   margin-bottom: 8rem;
 
    &__title {
-      margin-bottom: 40px;
+      margin-bottom: 4rem;
    }
 
    &__wrapper {
@@ -422,7 +427,7 @@ border: 1px solid $color-brown2;
    }
 
    &__text {
-      margin-bottom: 16px;
+      margin-bottom: 1.6rem;
    }
 
    &__autor {
@@ -431,20 +436,20 @@ border: 1px solid $color-brown2;
 }
 
 .wrap {
-   padding: 40px 44px 64px;
-   border: 1px solid $color-brown;
+   padding: 4rem 4.4rem 6.4rem;
+   border: 0.1rem solid $color-brown;
    box-sizing: border-box;
 }
 
 
 /* map */
 .map__info__title {
-   margin-bottom: 42px;
+   margin-bottom: 4.2rem;
    text-align: start;
 }
 
 dd {
-   margin-bottom: 32px;
+   margin-bottom: 3.2rem;
 }
 
 .map__wrap {
@@ -458,11 +463,11 @@ dd {
    position: absolute;
    background: $color-white;
    box-shadow: $box-shadow2;
-   border-radius: 12px;
-   padding: 40px 108px 0 35px;
-   top: 52px;
-   left: 102px;
-   max-width: 386px;
+   border-radius: 1.2rem;
+   padding: 4rem 10.8rem 0 3.5rem;
+   top: 5.2rem;
+   left: 10.2rem;
+   max-width: 38.6rem;
    text-align: start;
 }
 
@@ -474,7 +479,7 @@ dd {
 /* footer */
 .footer {
    background: $color-brown;
-   max-height: 97px;
+   max-height: 9.7rem;
 
    &__wrap {
       display: flex;
@@ -485,21 +490,21 @@ dd {
    }
 
    &__logo {
-      margin: 24px auto 40px 0;
+      margin: 2.4rem auto 4rem 0;
    }
 
    &__nav {
       color: $color-white;
 
       &:nth-child(even) {
-         margin-left: 68px;
-         margin-right: 68px;
+         margin-left: 6.8rem;
+         margin-right: 6.8rem;
       }
    }
 
    &__item {
-      padding-top: 30px;
-      padding-bottom: 47px;
+      padding-top: 3rem;
+      padding-bottom: 4.7rem;
    }
 
    &__social {
@@ -520,6 +525,6 @@ dd {
 }
 
 .even {
-   margin-left: 20px;
-   margin-right: 20px;
+   margin-left: 2rem;
+   margin-right: 2rem;
 }
