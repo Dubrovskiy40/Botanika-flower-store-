@@ -1,21 +1,40 @@
+$maxWidth: 1440;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+   $addSize: $pcSize - $mobSize;
+   $addMobileSize: $addSize + $addSize * 0.7;
+   @media (max-width: 767px) {
+      font-size: calc(#{$mobSize + px} + #{addMobileSize} * ((100vw - 320px) / #{$maxWidth}));
+   }
+   @media (min-width: 767px) {
+      font-size: calc(#{$mobSize + px} + #{addSize} * (100vw / #{$maxWidth}));
+   }
+}
+
 @mixin font_16 {
-   font-size: 1.6rem;
-   line-height: 2rem;
+   //font-size: 16px;
+   @include adaptiv-font(16, 10);
+   line-height: 20px;
    font-style: normal;
    font-weight: normal;
 }
 @mixin font_24 {
-   font-size: 2.4rem;
-   line-height: 2.9rem;
+   //font-size: 24px;
+   @include adaptiv-font(24, 12);
+   line-height: 29px;
    font-weight: 500;
 }
 @mixin font_36 {
-   font-size: 3.6rem;
-   line-height: 4.8rem;
+   //font-size: 36px;
+   @include adaptiv-font(36, 20);
+   line-height: 48px;
 }
 @mixin font_44 {
-   font-size: 4.4rem;
-   line-height: 5.9rem;
+   //font-size: 44px;
+   @include adaptiv-font(44, 24);
+   line-height: 59px;
    font-style: normal;
    font-weight: normal;
 }
+
+

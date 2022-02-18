@@ -1,38 +1,56 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
-html {
-   font-size: 10px;
-}
-
-* {
-   box-sizing: border-box;
-   list-style-type: none;
-   margin: 0;
+/* Обнуление */
+*,
+*::before,
+*:after {
    padding: 0;
+   margin: 0;
    border: 0;
-   text-decoration: none;
+   box-sizing: border-box;
 }
-
 a {
+   text-decoration: none;
    color: inherit;
 }
-
+ul,
+ol,
+li {
+   list-style: none;
+}
+img {
+   vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size:inherit;
+}
+html,
+body {
+   height: 100%;
+   line-height: 1;
+}
 body {
    font-family: 'Montserrat', sans-serif;
    font-style: normal;
    font-weight: normal;
-   font-size: 16px;
 }
+/*-------------------*/
 
 li:hover {
    color: $color-black;
 }
 
 .container {
-   max-width: 120rem;
+   max-width: 1200px;
+  /* padding: 0 calc(50% - 1200px / 2) */
    margin: 0 auto;
-   width: 100%;
 }
 
 .text {
@@ -57,10 +75,10 @@ border: 1px solid $color-brown2;
 
 /* header */
 .header {
-   border-top: 0.1rem solid $color-brown;
-   border-bottom: 0.1rem solid $color-brown;
-   margin-bottom: 8.2rem;
-   margin-top: 2.6rem;
+   border-top: 1px solid $color-brown;
+   border-bottom: 1px solid $color-brown;
+   margin-bottom: 82px;
+   margin-top: 26px;
 
    &__section {
       display: flex;
@@ -72,13 +90,13 @@ border: 1px solid $color-brown2;
 }
 
 .header__list {
-   margin: 2.2rem 0;
+   margin: 22px 0;
 }
 
 
 /* heading */
 .heading {
-   margin-bottom: 4.8rem;
+   margin-bottom: 48px;
 
    &__main {
       display: flex;
@@ -87,7 +105,7 @@ border: 1px solid $color-brown2;
          font-family: Playfair Display;
          @include font_44;
          color: $color-brown;
-         margin-bottom: 2.4rem;
+         margin-bottom: 24px;
 
          & span {
             font-style: italic;
@@ -97,20 +115,20 @@ border: 1px solid $color-brown2;
       &_text {
          @include font_24;
          color: $color-brown;
-         margin-bottom: 6.4rem;
+         margin-bottom: 64px;
       }
 
       &_btn {
          color: $color-white;
          background: $color-brown2;
-         border-radius: 4rem;
-         padding: 3rem 7rem;
+         border-radius: 40px;
+         padding: 30px 70px;
       }
 
       &_pic-1 {
          display: flex;
          align-items: flex-end;
-         margin: 5.8rem 2rem 0 2.3rem;
+         margin: 58px 20px 0 23px;
       }
 
       &_pic-2 {
@@ -123,7 +141,7 @@ border: 1px solid $color-brown2;
 
 /* our-pluses */
 .our-pluses {
-   margin-bottom: 8rem;
+   margin-bottom: 80px;
 
    &__wrap {
       display: flex;
@@ -137,20 +155,20 @@ border: 1px solid $color-brown2;
       width: 33.33%;
 
       &-text {
-         margin-left: 2rem;
-         max-width: 28.5rem;
+         margin-left: 20px;
+         max-width: 285px;
       }
    }
 
    &__title {
-      margin-bottom: 0.8rem;
+      margin-bottom: 8px;
    }
 }
 
 
 /* our-products */
 .our-products {
-   margin-bottom: 8rem;
+   margin-bottom: 80px;
    display: flex;
    justify-content: center;
 
@@ -158,55 +176,56 @@ border: 1px solid $color-brown2;
       text-align: center;
       letter-spacing: 0.02em;
       color: $color-brown;
-      margin-bottom: 3.6rem;
+      margin-bottom: 36px;
    }
 
    &__content-wrap {
-      margin-right: 2rem;
+      margin-right: 20px;
       display: flex;
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
-      max-width: 79.4rem;
+      max-width: 794px;
    }
 
    &__content {
-      margin-top: 6.3rem;
+      margin-top: 63px;
 
       &-title {
          @include font_24;
          color: $color-brown;
-         margin-bottom: 2rem;
+         margin-bottom: 20px;
       }
 
       &-span {
-         margin-top: 2.4rem;
-         margin-bottom: 2.4rem;
+         margin-top: 24px;
+         margin-bottom: 24px;
       }
    }
 
    &__price {
       @include font_24;
       color: $color-brown;
+      margin-bottom: 64px;
    }
 
    &__btn {
-      margin-top: 6.4rem;
-      padding: 3rem 10.5rem;
+      margin-top: 64px;
+      padding: 30px 105px;
       color: $color-white;
       background: $color-brown2;
-      border-radius: 4rem;
+      border-radius: 40px;
    }
 
    &__nav {
       display: flex;
       justify-content: center;
       flex-wrap: nowrap;
-      margin-top: 2.4rem;
+      margin-top: 24px;
    }
 
    &__nav-right {
-      margin-left: 2rem;
+      margin-left: 20px;
    }
 }
 
@@ -222,7 +241,7 @@ border: 1px solid $color-brown2;
 
 /* galery */
 .galery {
-   margin-bottom: 8rem;
+   margin-bottom: 80px;
 }
 .cards {
    display: flex;
@@ -230,8 +249,8 @@ border: 1px solid $color-brown2;
 }
 .card {
    position: relative;
-   margin-bottom: 8rem;
-   max-width: 38.7rem;
+   margin-bottom: 80px;
+   max-width: 387px;
 
    &:hover .card-overlay {
       opacity: 1;
@@ -247,13 +266,13 @@ border: 1px solid $color-brown2;
       display: flex;
 
       &-content {
-         padding: 4rem 12.1rem 6.4rem 10.2rem;
+         padding: 40px 121px 64px 102px;
       }
 
       &__title {
          font-family: Playfair Display;
          @include font_44;
-         margin-bottom: 2.4rem;
+         margin-bottom: 24px;
          letter-spacing: 0.02em;
          color: $color-white;
       }
@@ -262,20 +281,16 @@ border: 1px solid $color-brown2;
          @include font_24;
          color: $color-white;
       }
-
-      &__img {
-         display: block;
-      }
    }
 
    &:hover {
-      -webkit-box-shadow: 0.6rem 0.4rem 3.5rem rgba(0, 0, 0, 0.21);
+      -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
       box-shadow: $box-shadow;
    }
 
    &-overlay {
       background: rgba(174, 124, 120, 0.6);
-      border-radius: 1rem;
+      border-radius: 10px;
       position: absolute;
       top: 0;
       left: 0;
@@ -297,18 +312,18 @@ border: 1px solid $color-brown2;
    }
 
    &-2 {
-      margin-left: 1.9rem;
-      margin-right: 1.9rem;
+      margin-left: 19px;
+      margin-right: 19px;
    }
 }
 
 
 /* four-step */
 .four-step {
-   margin-bottom: 8rem;
+   margin-bottom: 80px;
 
    &__title {
-      margin-bottom: 3.6rem;
+      margin-bottom: 36px;
    }
 
    &__wrap {
@@ -323,8 +338,8 @@ border: 1px solid $color-brown2;
       text-align: center;
 
       &-title {
-         margin-top: 0.8rem;
-         margin-bottom: 0.8rem;
+         margin-top: 8px;
+         margin-bottom: 8px;
       }
    }
 }
@@ -332,7 +347,7 @@ border: 1px solid $color-brown2;
 
 /* our-news */
 .our-news {
-   margin-bottom: 8rem;
+   margin-bottom: 80px;
 
    &__content {
       display: flex;
@@ -341,19 +356,19 @@ border: 1px solid $color-brown2;
       &-text {
          display: flex;
          flex-direction: column;
-         max-width: 36.5rem;
+         max-width: 365px;
       }
    }
 
    &__title {
-      padding-top: 7rem;
+      padding-top: 70px;
       text-align: left;
    }
 
    &__text {
       text-align: left;
-      margin-top: 4rem;
-      margin-bottom: 4rem;
+      margin-top: 40px;
+      margin-bottom: 40px;
       @include font_24;
       color: $color-brown;
    }
@@ -365,7 +380,7 @@ border: 1px solid $color-brown2;
 
    &__photo {
       display: flex;
-      max-width: 69.2rem;
+      max-width: 692px;
       margin: 0 auto;
    }
 }
@@ -385,34 +400,34 @@ border: 1px solid $color-brown2;
 }
 
 .big {
-   max-height: 46rem;
+   max-height: 460px;
 }
 
 .small-wrap {
-   flex-basis: 28.5rem;
-	flex-shrink: 0;
-	display: flex;
-	flex-direction: column;
-   margin-right:2rem;
+   flex-basis: 285px;
+   flex-shrink: 0;
+   display: flex;
+   flex-direction: column;
+   margin-right:20px;
 }
 
 .small {
    flex-basis:50%;
-   max-height: 28.5rem;
+   max-height: 285px;
 }
 
 .our-news__photo-1 {
-   margin-bottom: 2rem;
+   margin-bottom: 20px;
 }
 
 
 /* review */
 .review {
-   padding: 4rem 4.4rem 6.4rem;
-   margin-bottom: 8rem;
+   padding: 40px 44px 64px;
+   margin-bottom: 80px;
 
    &__title {
-      margin-bottom: 4rem;
+      margin-bottom: 40px;
    }
 
    &__wrapper {
@@ -427,7 +442,7 @@ border: 1px solid $color-brown2;
    }
 
    &__text {
-      margin-bottom: 1.6rem;
+      margin-bottom: 16px;
    }
 
    &__autor {
@@ -436,20 +451,20 @@ border: 1px solid $color-brown2;
 }
 
 .wrap {
-   padding: 4rem 4.4rem 6.4rem;
-   border: 0.1rem solid $color-brown;
+   padding: 40px 44px 64px;
+   border: 1px solid $color-brown;
    box-sizing: border-box;
 }
 
 
 /* map */
 .map__info__title {
-   margin-bottom: 4.2rem;
+   margin-bottom: 42px;
    text-align: start;
 }
 
 dd {
-   margin-bottom: 3.2rem;
+   margin-bottom: 32px;
 }
 
 .map__wrap {
@@ -463,11 +478,11 @@ dd {
    position: absolute;
    background: $color-white;
    box-shadow: $box-shadow2;
-   border-radius: 1.2rem;
-   padding: 4rem 10.8rem 0 3.5rem;
-   top: 5.2rem;
-   left: 10.2rem;
-   max-width: 38.6rem;
+   border-radius: 12px;
+   padding: 40px 108px 0 35px;
+   top: 52px;
+   left: 102px;
+   max-width: 386px;
    text-align: start;
 }
 
@@ -479,7 +494,7 @@ dd {
 /* footer */
 .footer {
    background: $color-brown;
-   max-height: 9.7rem;
+   max-height: 97px;
 
    &__wrap {
       display: flex;
@@ -490,21 +505,21 @@ dd {
    }
 
    &__logo {
-      margin: 2.4rem auto 4rem 0;
+      margin: 24px auto 40px 0;
    }
 
    &__nav {
       color: $color-white;
 
       &:nth-child(even) {
-         margin-left: 6.8rem;
-         margin-right: 6.8rem;
+         margin-left: 68px;
+         margin-right: 68px;
       }
    }
 
    &__item {
-      padding-top: 3rem;
-      padding-bottom: 4.7rem;
+      padding-top: 30px;
+      padding-bottom: 47px;
    }
 
    &__social {
@@ -525,6 +540,6 @@ dd {
 }
 
 .even {
-   margin-left: 2rem;
-   margin-right: 2rem;
+   margin-left: 20px;
+   margin-right: 20px;
 }
